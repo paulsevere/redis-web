@@ -28,7 +28,7 @@ fn index(conn: State<redis::Client>, command: String, args: PathBuf) -> String {
     let qargs = args.iter()
         .map(|seg| String::from(seg.to_str().unwrap()))
         .collect::<Vec<String>>();
-    rd::execute(conn.deref(), command, qargs).unwrap_or(String::from("error"))
+    rd::execute(conn.deref(), command, qargs).unwrap_or(String::from("Ok"))
 
 }
 
