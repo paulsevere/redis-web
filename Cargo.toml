@@ -1,0 +1,14 @@
+[package]
+authors = ["Paul Severe <pjo2110@columbia.edu>"]
+name = "redis-server"
+version = "0.1.0"
+
+[dependencies]
+dump = "0.1.1"
+rocket = "0.3.2"
+rocket_codegen = "0.3.2"
+serde_json = "1.0.3"
+
+[dependencies.redis]
+features = ["with-rustc-json"]
+version = "*"
